@@ -1,28 +1,85 @@
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/*Header */
+header {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+    padding: 5px 20px;
+    color: darkgreen;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+header img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
+/* Main Content layout */
 main {
-    flex: 1 0 auto; /* fills remaining space between header and footer */
-    display: flex;
-    flex-direction: column;
-    align-items: center;     /* horizontal centering */
+    display: flex;            /* make children side by side */
+    flex-wrap: wrap;          /* allow stacking on smaller screens */
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;  /* top padding to avoid overlap with header */
+}
+.left-section, .right-section {
+    flex: 1;                  /* sections share available width equally */
+    min-width: 250px;         /* prevents them from getting too narrow */
+}
+.left-section {
+    flex: 0 1 300px;
     text-align: center;
+    color: darkgreen
 }
-.center-text {
+.right-section {
+    flex: 0 1 500px;              /* larger width for right section */
+    text-align: center;           /* center text */
     color: darkgreen;
-    text-align:center;
-    margin-top: 0px;
-    padding: 0 10px;
 }
+.left-section img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.right-section h1 {
+    margin-bottom: 15px;
+}
+.right-section p {
+    line-height: 1.6;
+    text-align: justify;
+}
+.right-section ul {
+    text-align: justify;
+}
+.links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: .75rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .contact { background:#1b5e20; color:white; }
+  .linkedin { background:#e5e7eb; color:#111827; }
+
 footer {
     color: darkgreen;
     text-align: center;
     padding: 10px;
     width: 100%;
     flex-shrink: 0;
+    border-top: 1px solid#ccc;
+}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;    /* stack sections vertically */
+        gap: 30px;
+    }
+
+    .left-section, .right-section {
+        flex: 1;                   /* full width on small screens */
+        text-align: center;
+    }
 }
