@@ -59,10 +59,53 @@ main {
     border-radius: 6px;
     text-decoration: none;
     font-weight: 500;
-  }
+}
   .contact { background:#1b5e20; color:white; }
   .linkedin { background:#e5e7eb; color:#111827; }
 
+  .contact-section {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      color: darkgreen;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    gap: 15px;             /* space between each label/input pair */
+}
+
+.contact-section label {
+    font-weight: bold;
+    margin-bottom: 5px;    /* small space below the label */
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;           /* take full width of the form */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* ensures padding doesn’t break layout */
+}
+
+.contact-section button {
+    padding: 12px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #065f06;
+}
+
+  
 footer {
     color: darkgreen;
     text-align: center;
