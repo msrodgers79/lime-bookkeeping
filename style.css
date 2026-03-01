@@ -218,20 +218,28 @@ main {
         order: 2;
     }
 
-    .corp-image-section {
+    .my-client-section {
         order: 3;
+    }
+
+    .support-section {
+        order: 4;
+    }
+
+    .corp-image-section {
+        order: 5;
         justify-content: center;
+    }
+
+    .books-structured-section {
+        order: 6;
+        padding: 20px 16px;
     }
 
     .corp-image-section img {
         width: 100%;
         max-width: 100%;
         height: auto;
-    }
-
-    /* Books structured section */
-    .books-structured-section {
-        padding: 20px 16px;
     }
 
     /* Footer */
