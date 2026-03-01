@@ -175,20 +175,68 @@ main {
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
+    /* Header */
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .branding {
+        gap: 16px;
+    }
+
+    .branding h1 {
+        font-size: 24px;
+    }
+
+    /* Nav */
+    .main-nav {
+        width: 100%;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .main-nav a {
+        font-size: 16px;
+    }
+
+    /* Main grid: single column, image after both text sections */
     main {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px 16px;
     }
 
-    .reliable-book-section,
-    .calm-approach-section,
-    .corp-image-section {
-        grid-column: 1;
-        grid-row: auto;
-        text-align: center;
+    .reliable-book-section {
+        order: 1;
+    }
+
+    .calm-approach-section {
+        order: 2;
     }
 
     .corp-image-section {
+        order: 3;
         justify-content: center;
+    }
+
+    .corp-image-section img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Books structured section */
+    .books-structured-section {
+        padding: 20px 16px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 16px;
+        word-break: break-word;
     }
 }
