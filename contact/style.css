@@ -1,3 +1,7 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -37,7 +41,8 @@ header img {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box; /* ensures padding doesn’t break layout */
+    font-family: inherit;
+    box-sizing: border-box; /* ensures padding doesn't break layout */
 }
 
 .contact-section button {

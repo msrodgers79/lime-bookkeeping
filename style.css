@@ -1,3 +1,7 @@
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
 .site-header {
    padding: 20px 0;
     background-color: #ffffff;
@@ -76,8 +80,18 @@ main {
 .calm-approach-section {
     grid-column: 1;
     grid-row: 2;
-    border-bottom: 2px solid #32cd32;
+    position: relative;
     padding-bottom: 20px;
+}
+
+.calm-approach-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(200% + 40px); /* span across column 2 including the gap */
+    height: 2px;
+    background-color: #32cd32;
 }
 
 .calm-approach-section ul {
