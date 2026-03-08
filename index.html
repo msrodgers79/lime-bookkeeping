@@ -48,9 +48,53 @@
             <p>When your books are structured correctly, everything else runs more smoothly.</p>
         </section>
 
-        <section class="corp-image-section">
-            <img src="images/corp_image.png" alt="Professional bookkeeping workspace" height="500" width="500"/>
+        <section class="deco-panel">
+            <div class="deco-inner">
+                <img
+                    src="images/limebookkeeping_logo.png"
+                    alt="Lime Bookkeeping"
+                    class="deco-logo"
+                    id="decoLogo"
+                />
+            </div>
         </section>
+
+        <script>
+            (function () {
+                const logo = document.getElementById('decoLogo');
+                let spinning = false;
+                let startAngle = 0;
+                let rafId = null;
+                let startTime = null;
+                const SPIN_DURATION = 700; // ms for one full spin
+
+                function easeOutCubic(t) {
+                    return 1 - Math.pow(1 - t, 3);
+                }
+
+                function animate(timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    const elapsed = timestamp - startTime;
+                    const progress = Math.min(elapsed / SPIN_DURATION, 1);
+                    const angle = startAngle + easeOutCubic(progress) * 360;
+                    logo.style.transform = 'rotate(' + angle + 'deg)';
+                    if (progress < 1) {
+                        rafId = requestAnimationFrame(animate);
+                    } else {
+                        startAngle = angle % 360;
+                        spinning = false;
+                        startTime = null;
+                    }
+                }
+
+                logo.addEventListener('mouseenter', function () {
+                    if (rafId) cancelAnimationFrame(rafId);
+                    spinning = true;
+                    startTime = null;
+                    rafId = requestAnimationFrame(animate);
+                });
+            })();
+        </script>
 
         <section class="my-client-section">
             <h2>My clients value</h2>
