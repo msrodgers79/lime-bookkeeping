@@ -1,5 +1,5 @@
 /* ── Index page styles ── */
-@import url('base.css');
+@import url('base.css?v=2');
 
 main {
     flex: 1;
