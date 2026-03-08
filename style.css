@@ -82,11 +82,18 @@ main {
 }
 
 .deco-logo {
-    width: 90%;
-    max-width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 16px;
+    width: 75%;
+    max-width: 380px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.deco-logo:hover {
+    box-shadow: 0 0 40px 12px rgba(50, 205, 50, 0.6),
+                0 0 80px 24px rgba(50, 205, 50, 0.25);
 }
 
 
@@ -179,7 +186,9 @@ main {
     }
 
     .reliable-book-section    { order: 1; }
-    .calm-approach-section    { order: 2; }
+    .calm-approach-section    { order: 2; padding-bottom: 0; }
+
+    .calm-approach-section::after { display: none; }
     .my-client-section        { order: 3; }
     .support-section          { order: 4; }
     .deco-panel               { order: 5; }
@@ -190,7 +199,7 @@ main {
     }
 
     .deco-logo {
-        width: 100%;
-        max-width: 100%;
+        width: 55%;
+        max-width: 220px;
     }
 }
