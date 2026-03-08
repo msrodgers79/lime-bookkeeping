@@ -51,7 +51,7 @@
         <section class="deco-panel">
             <div class="deco-inner">
                 <img
-                    src="images/limebookkeeping_logo.png"
+                    src="images/lime-desk.JPG"
                     alt="Lime Bookkeeping"
                     class="deco-logo"
                     id="decoLogo"
@@ -59,42 +59,6 @@
             </div>
         </section>
 
-        <script>
-            (function () {
-                const logo = document.getElementById('decoLogo');
-                let spinning = false;
-                let startAngle = 0;
-                let rafId = null;
-                let startTime = null;
-                const SPIN_DURATION = 700; // ms for one full spin
-
-                function easeOutCubic(t) {
-                    return 1 - Math.pow(1 - t, 3);
-                }
-
-                function animate(timestamp) {
-                    if (!startTime) startTime = timestamp;
-                    const elapsed = timestamp - startTime;
-                    const progress = Math.min(elapsed / SPIN_DURATION, 1);
-                    const angle = startAngle + easeOutCubic(progress) * 360;
-                    logo.style.transform = 'rotate(' + angle + 'deg)';
-                    if (progress < 1) {
-                        rafId = requestAnimationFrame(animate);
-                    } else {
-                        startAngle = angle % 360;
-                        spinning = false;
-                        startTime = null;
-                    }
-                }
-
-                logo.addEventListener('mouseenter', function () {
-                    if (rafId) cancelAnimationFrame(rafId);
-                    spinning = true;
-                    startTime = null;
-                    rafId = requestAnimationFrame(animate);
-                });
-            })();
-        </script>
 
         <section class="my-client-section">
             <h2>My clients value</h2>
@@ -111,9 +75,11 @@
             <p>Monthly bookkeeping and reconciliations</p>
             <ul class="support-list">
                 <li class="support-vat">VAT return preparation and submission (MTD compliant)</li>
+                <li class="support-cis">CIS support for contractors and subcontractors</li>
                 <li class="support-payroll">Payroll processing (including directors)</li>
                 <li class="support-invoice">Income and invoice finance reconciliations</li>
                 <li class="support-companies">Companies House ID Verification</li>
+                <li class="support-companies">Verification of Persons with Significant Control</li>
                 <li class="support-ascp">ASCP Authorised Service Provider support</li>
             </ul>
         </section>

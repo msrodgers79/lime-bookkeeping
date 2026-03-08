@@ -74,7 +74,7 @@ main {
 .deco-inner {
     width: 100%;
     min-height: 420px;
-    background-color: #1b5e20;
+    background-color: transparent;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -82,19 +82,13 @@ main {
 }
 
 .deco-logo {
-    width: 75%;
-    max-width: 380px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease;
-    will-change: transform;
+    width: 90%;
+    max-width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
-.deco-logo:hover {
-    box-shadow: 0 0 40px 12px rgba(50, 205, 50, 0.6),
-                0 0 80px 24px rgba(50, 205, 50, 0.25);
-}
 
 .my-client-section {
     grid-column: 1 / -1;
@@ -157,6 +151,7 @@ main {
 }
 
 .support-vat::before       { content: '📋'; }
+.support-cis::before       { content: '👷'; }
 .support-payroll::before   { content: '💷'; }
 .support-invoice::before   { content: '🔁'; }
 .support-companies::before { content: '🏛️'; }
@@ -195,7 +190,7 @@ main {
     }
 
     .deco-logo {
-        width: 55%;
-        max-width: 220px;
+        width: 100%;
+        max-width: 100%;
     }
 }
