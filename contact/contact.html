@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Lime Bookkeeping — get in touch to discuss your bookkeeping and compliance needs. Based in Basingstoke, serving clients across the UK.">
     <title>Contact | Lime Bookkeeping</title>
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="icon" href="/images/limebookkeeping_logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Contact Lime Bookkeeping</h1>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="branding">
+                <a href="/index.html" class="branding-link">
+                    <img src="../images/limebookkeeping_logo.png" alt="Lime Bookkeeping" height="100" width="100" />
+                    <span class="brand-name"><span class="brand-lime">Lime</span><br><span class="brand-lime">Bookkeeping</span></span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <a href="/services.html">Services</a>
+                <a href="/about.html">About</a>
+                <a href="/pricing.html">Pricing</a>
+                <a class="contact" href="/contact/contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
+        <section class="contact-intro">
+            <h1>Get in Touch</h1>
+            <p>I typically respond within one business day. Alternatively, you can email me directly at <a href="mailto:lindsey.spurway@lime-bookkeeping.co.uk">lindsey.spurway@lime-bookkeeping.co.uk</a>.</p>
+        </section>
+
         <section class="contact-section">
             <form action="https://formspree.io/f/mjggraro" method="POST">
+                <!-- Honeypot field — hidden from real users, catches bots -->
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -31,7 +54,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Lime Bookkeeping</p>
+        <p>&copy; 2026 Lime Bookkeeping | Basingstoke, Hampshire | Serving clients across the UK<br>Bookkeeping • VAT • CIS • Payroll • ASCP</p>
     </footer>
 
 </body>
