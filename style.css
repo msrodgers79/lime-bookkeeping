@@ -1,5 +1,5 @@
 /* ── Index page styles ── */
-@import url('base.css?v=2');
+@import url('base.css?v=8');
 
 main {
     flex: 1;
@@ -73,27 +73,18 @@ main {
 
 .deco-inner {
     width: 100%;
-    min-height: 420px;
-    background-color: transparent;
-    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .deco-logo {
-    width: 75%;
-    max-width: 380px;
+    width: 85%;
     height: auto;
+    object-fit: contain;
+    border-radius: 16px;
     cursor: pointer;
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease;
     will-change: transform;
-}
-
-.deco-logo:hover {
-    box-shadow: 0 0 40px 12px rgba(50, 205, 50, 0.6),
-                0 0 80px 24px rgba(50, 205, 50, 0.25);
 }
 
 
@@ -194,12 +185,7 @@ main {
     .deco-panel               { order: 5; }
     .books-structured-section { order: 6; padding: 20px 16px; }
 
-    .deco-inner {
-        min-height: 260px;
-    }
-
     .deco-logo {
-        width: 55%;
-        max-width: 220px;
+        max-width: 280px;
     }
 }
